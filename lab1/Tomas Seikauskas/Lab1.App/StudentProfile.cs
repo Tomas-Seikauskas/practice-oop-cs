@@ -13,13 +13,6 @@ namespace Lab1
             return $"# Užduotis {taskNo}\n\nStudentas: {Vardas} {Pavarde}\nGrupė: {Grupe}";
         }
 
-        public void Print(int task)
-        {
-            Console.WriteLine($"Vardas Pavarde: {Vardas} {Pavarde}");
-            Console.WriteLine($"Grupe: {Grupe}");
-            Console.WriteLine($"Paskaitos data: {PaskaitosData}");
-            Console.WriteLine($"Random Uzduotis: {task}");
-        }
     }
 }
 

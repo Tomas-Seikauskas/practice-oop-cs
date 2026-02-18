@@ -14,23 +14,28 @@ namespace Lab1
             int task = rnd.Next(1, max + 1);
 
             StudentProfile profile = new StudentProfile();
-            profile.Print(task);
+
+            Console.WriteLine($"Vardas Pavarde: {profile.Vardas} {profile.Pavarde}");
+            Console.WriteLine($"Grupe: {profile.Grupe}");
+            Console.WriteLine($"Paskaitos data: {profile.PaskaitosData}");
+            Console.WriteLine($"Random Uzduotis: {task}");
+
+            
             Console.WriteLine("--------------------------------------------------------------------------------------");
             RandomLab(task);
 
-            //--------------------------------------------------------------------------------------//
-  
+            Uzduotis();
 
         }
 
-        public void Uzduotis()
+        public static void Uzduotis()
         {
           Group group = new Group();
 
             Console.WriteLine("Paieska pagal id");
             int id = Convert.ToInt32(Console.ReadLine());
 
-            Studentas? student = group.FindById(id);
+            Studentas student = group.FindById(id);
 
             if (student != null)
             {
@@ -43,7 +48,7 @@ namespace Lab1
 
             Console.WriteLine("Paieska pagal el. pastą");
             string email = Console.ReadLine()!;
-            Studentas? studentByEmail = group.FindByEmail(email);
+            Studentas studentByEmail = group.FindByEmail(email);
 
             if (studentByEmail != null)
             {
@@ -54,6 +59,7 @@ namespace Lab1
                 Console.WriteLine("Studentas nerastas!");
             }
         }
+
         public static void RandomLab(int task)
         {
             if (task == 5)
