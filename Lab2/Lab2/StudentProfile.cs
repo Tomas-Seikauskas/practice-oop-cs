@@ -3,8 +3,8 @@ namespace Lab2;
 
 public class StudentProfile
 {
-    public string Vardas { get; } = "Jonas";
-    public string Pavarde { get; } = "Jonaitis";
-    public string Grupe { get; } = "PI23A";
+    public string Vardas { get; } = "Tomas";
+    public string Pavarde { get; } = "Seikauskas";
+    public string Grupe { get; } = "PS-5";
     public string PaskaitosData { get; } = "2026-02-24";
 }
